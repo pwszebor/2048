@@ -22,8 +22,15 @@
     <height>508</height>
    </size>
   </property>
+  <property name="focusPolicy">
+   <enum>Qt::StrongFocus</enum>
+  </property>
   <property name="windowTitle">
    <string>2048</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../resources/images.qrc">
+    <normaloff>:/tiles/2048.png</normaloff>:/tiles/2048.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="sizePolicy">
@@ -41,12 +48,18 @@
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
       <property name="title">
        <string/>
       </property>
       <layout class="QGridLayout" name="gridLayout">
-       <item row="1" column="3">
+       <item row="1" column="2">
         <widget class="QLabel" name="score_">
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
          <property name="text">
           <string>0</string>
          </property>
@@ -55,21 +68,11 @@
          </property>
         </widget>
        </item>
-       <item row="1" column="0">
-        <widget class="QToolButton" name="newGame_">
-         <property name="minimumSize">
-          <size>
-           <width>100</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>New game</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="2">
+       <item row="1" column="1">
         <widget class="QLabel" name="label_">
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
          <property name="layoutDirection">
           <enum>Qt::LeftToRight</enum>
          </property>
@@ -81,16 +84,10 @@
          </property>
         </widget>
        </item>
-       <item row="1" column="1">
-        <widget class="QToolButton" name="undo_">
-         <property name="minimumSize">
-          <size>
-           <width>100</width>
-           <height>0</height>
-          </size>
-         </property>
+       <item row="1" column="0">
+        <widget class="QPushButton" name="newGame_">
          <property name="text">
-          <string>Undo</string>
+          <string>New game</string>
          </property>
         </widget>
        </item>
@@ -110,6 +107,9 @@
         <width>420</width>
         <height>420</height>
        </size>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
       </property>
       <property name="autoFillBackground">
        <bool>true</bool>

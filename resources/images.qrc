@@ -1,5 +1,18 @@
 <RCC>
-    <qresource prefix="/background">
-        <file>background.png</file>
-    </qresource>
+  <qresource prefix="/background">
+    <file>background.png</file>
+  </qresource>
+  <qresource prefix="tiles">
+    <file>2.png</file>
+    <file>4.png</file>
+    <file>8.png</file>
+    <file>16.png</file>
+    <file>32.png</file>
+    <file>64.png</file>
+    <file>128.png</file>
+    <file>256.png</file>
+    <file>512.png</file>
+    <file>1024.png</file>
+    <file>2048.png</file>
+  </qresource>
 </RCC>

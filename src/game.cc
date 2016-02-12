@@ -5,7 +5,6 @@
 #include "game.h"
 #include <QApplication>
 #include "mainWindow.h"
-#include "gameLogic.h"
 
 namespace game2048 {
 
@@ -20,11 +19,12 @@ Game::Game() {
 
 int Game::execute(int argc, char **argv) {
     QApplication app(argc, argv);
-    auto window = std::make_shared<MainWindow>();
 
-    gameLogic2048::GameLogic game;
-    game.addObserver(window);
-    game.startGame();
+    auto game = std::make_shared<gameLogic2048::GameLogic>();
+    auto window = std::make_shared<MainWindow>(std::ref(game));
+
+    game->addObserver(window);
+    game->startGame();
 
     window->show();
     return app.exec();

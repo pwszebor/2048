@@ -11,6 +11,7 @@ class Tile : public QGraphicsPixmapItem {
 public:
     Tile(int value, QGraphicsItem *parent = nullptr);
     void changeValue(int value);
+    void moveTo(int index);
 };
 
 

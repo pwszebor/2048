@@ -10,7 +10,6 @@ namespace game2048 {
 class Game {
 public:
     static Game &getInstance();
-
     int execute(int argc, char **argv);
 
 private:
